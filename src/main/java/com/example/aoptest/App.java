@@ -11,9 +11,10 @@ public class App {
 				new ClassPathXmlApplicationContext("config/applicationContext.xml");
 		
 		ProductService ps = ac.getBean(ProductService.class);
-		
 		ProductVo vo = ps.findProduct("노트북");
+		System.out.println("검색된 제품 : " + vo);
 		
+		vo = ps.findProduct("bomb");
 		System.out.println("검색된 제품 : " + vo);
 	}
 
